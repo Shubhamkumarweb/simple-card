@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Profile card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing: border-box;
+    }
+    body{
+      background-color:hsl(185, 75%, 39%);
+      text-align: center;
+      font-family: 'Kumbh Sans', sans-serif; 
+      background-image: 
+    url("images/bg-pattern-top.svg"),
+    url("images/bg-pattern-bottom.svg");
+  background-position:
+    bottom 100px left -60px, 
+    top 50vh right -50px; 
+  background-repeat:
+    no-repeat; 
+    background-size: 50%;
+    }
+    .card{
+      height:380px;
+      width:330px;
+      margin:150px auto 0;
+      border-radius:16px;
+      background-color:white;
+      overflow: hidden;
+    }
+    #topbg{
+      z-index: 1;
+    }
+    #dp{
+      
+      border-radius: 50%;
+      width:96px;
+      margin:0px auto 0;
+      height:96px;
+      overflow: hidden;
+      z-index: 5;
+      border: 5px solid white;
+      transform: translateY(-50px);
+    }
+    #dp img{
+      height:100%;
+      width:100%;
+    }
+    #small{
+      color:hsl(0, 0%, 59%);
+      font-weight: 400px;
+      padding:4px;
+    }
+    
+    .stats{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      padding:20px 12px;
+      border-top:1px solid hsla(0, 0%, 59%, 0.233);
+    }
+    #info{
+transform: translateY(-30px);
+    }
+    .attribution{
+      position: absolute;
+      bottom:5px;
+      width:100vw;
+      color:white;
+      text-align: center;
+    }
+    a{
+      text-decoration: none;
+      color:black;
+    }
+    a:hover{
+      color:grey;
+    }
+    @media (max-width: 450px){
+      body{
+  background-position:
+    top -150px left -160px, 
+    bottom -300px right -150px; 
+  background-repeat:
+    no-repeat; 
+    background-size:100%;
+    }
+    .attribution{
+      font-size: 14px;
+    }
+    }
+    </style>
+</head>
+<body>
+  <div class="card">
+    <div id="topbg">
+      <img src="images/bg-pattern-card.svg" alt="">
+    </div>
+    <div id="dp">
+      <img src="images/image-victor.jpg" alt="">
+    </div>
+    <div id="info">
+      <h3 id="big">Victor crest <span id="small">26</span> </h3>
+      <h4 id="small" style="margin-top: 16px;">London</h4>
+    </div>
+    <div class="stats">
+      <div id="box"><h3>80K</h3><h5 id="small">Followers</h5></div>
+      <div id="box"><h3>803K</h3><h5 id="small">Likes</h5></div>
+      <div id="box"><h3>1.4K</h3><h5 id="small">Photos</h5></div>
+    </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+   Coded by <a href="https::/github.com/shubhamkumarweb">SHUBHAM</a>.
+  </div>
+</body>
+</html>
